@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#1723ba">
+  <meta name="description" content="Выбери профессию, университет или подготовку к экзаменам. Начни путь к поступлению с VentorMe.">
+  <title>VentorMe — Поступай с понятным планом | Shamar’s girls</title>
+  <style>
+    :root { --blue:#2736ee; --blue-dark:#1723ba; --ink:#17203f; --muted:#64708b; --bg:#f5f7ff; --card:#fff; --line:#dfe5f7; --mint:#c7f4d2; --violet:#eee8ff; }
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--bg);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:var(--ink);line-height:1.55;-webkit-font-smoothing:antialiased} a{color:inherit} button{font:inherit} a:focus-visible,button:focus-visible{outline:3px solid #b3e1ff;outline-offset:4px}
+    .shell{width:min(1120px,calc(100% - 40px));margin:auto}.top{display:flex;align-items:center;justify-content:space-between;padding:22px 0}.brand{font-size:22px;font-weight:900;letter-spacing:-.06em;text-decoration:none}.brand span{color:var(--blue)}.topright{display:flex;gap:18px;align-items:center}.navlink{font-size:14px;font-weight:650;text-decoration:none;color:var(--muted)}.tinyCTA{padding:12px 17px;border-radius:13px;background:var(--ink);color:#fff;text-decoration:none;font-weight:750;font-size:14px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#293af0 0%,#2630b7 66%,#171c70 100%);border-radius:34px;padding:68px 64px;color:#fff;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:44px;min-height:520px}.hero::after{content:"";position:absolute;inset:auto -110px -160px auto;width:460px;height:460px;border:1px solid #ffffff30;border-radius:50%;box-shadow:0 0 0 65px #ffffff08,0 0 0 150px #ffffff05;pointer-events:none}.heroContent{position:relative;z-index:1}.eyebrow{display:inline-flex;background:#ffffff24;border:1px solid #ffffff45;padding:7px 12px;border-radius:99px;font-size:12px;letter-spacing:.02em;font-weight:750}.hero h1{font-size:clamp(36px,4.6vw,59px);letter-spacing:-.055em;line-height:1.06;margin:20px 0}.hero p{max-width:470px;font-size:17px;line-height:1.55;color:#e2e8ff;margin:0 0 26px}.actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}.primary{display:inline-flex;align-items:center;justify-content:center;gap:12px;text-decoration:none;background:#cfff80;color:#1a2450;padding:15px 22px;border-radius:16px;font-weight:850;min-height:52px;box-shadow:0 12px 30px #0c124750}.primary:hover{background:#e0ffa9}.second{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:15px 20px;border:1px solid #ffffff66;border-radius:16px;color:#fff;text-decoration:none;font-size:14px;font-weight:750}.promise{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px}.promise span{font-size:12px;border:1px solid #ffffff35;background:#ffffff16;border-radius:99px;padding:6px 11px}
+    .preview{position:relative;z-index:1;align-self:center;background:#fff;color:var(--ink);border-radius:25px;padding:22px;transform:rotate(2deg);box-shadow:0 25px 60px #10155969}.pretop{display:flex;align-items:center;justify-content:space-between;font-size:12px;font-weight:750;color:var(--muted);margin-bottom:18px}.pretop strong{color:var(--blue)}.pills{display:flex;gap:6px}.pills i{height:8px;width:8px;border-radius:50%;background:#d5dbf2}.pills i:first-child{background:#b1f0b2}.preview h3{font-size:23px;letter-spacing:-.04em;margin:0 0 8px;line-height:1.23}.preview>p{color:var(--muted);font-size:13px;margin:0 0 18px}.timeline{display:flex;flex-direction:column;gap:12px}.tl{display:flex;align-items:center;gap:12px;border:1px solid #e5e9fa;padding:11px 12px;border-radius:14px;font-size:13px;font-weight:700}.num{display:grid;place-items:center;width:32px;height:32px;flex-shrink:0;border-radius:11px;color:var(--blue);background:#eaf0ff;font-weight:900}.tl:first-child{background:#f6f8ff}.bottompreview{display:flex;align-items:center;justify-content:space-between;margin-top:17px;padding-top:15px;border-top:1px solid #e8ebf6;font-size:12px;color:var(--muted)}.bottompreview strong{color:#258353}
+    .below{padding:52px 0 18px}.sectionLabel{font-size:12px;letter-spacing:.12em;font-weight:900;text-transform:uppercase;color:var(--blue)}.h2{font-size:clamp(28px,3.2vw,39px);line-height:1.15;letter-spacing:-.05em;max-width:650px;margin:12px 0 12px}.sub{font-size:16px;color:var(--muted);max-width:720px;margin:0 0 24px}.options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.option{display:flex;flex-direction:column;gap:12px;text-align:left;border:2px solid var(--line);background:#fff;padding:23px;border-radius:22px;cursor:pointer;transition:.15s transform,.15s border-color}.option:hover{transform:translateY(-2px)}.option[aria-pressed="true"]{border-color:var(--blue);box-shadow:0 0 0 4px #2736ee14}.option .emoji{display:grid;place-items:center;width:45px;height:45px;border-radius:15px;background:#e6ebff;font-size:22px}.option strong{font-size:19px;letter-spacing:-.035em}.option small{font-size:14px;color:var(--muted);line-height:1.5}.result{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;border-radius:22px;background:#edf0ff;border:1px solid #d9dfff;padding:22px 26px;margin-top:16px}.result .k{font-size:12px;color:var(--blue);text-transform:uppercase;letter-spacing:.07em;font-weight:900}.result h3{font-size:21px;line-height:1.25;margin:5px 0 5px}.result p{margin:0;font-size:14px;color:var(--muted)}.bluebtn{white-space:nowrap;background:var(--blue);color:#fff;padding:16px 21px;font-weight:850;text-decoration:none;border-radius:14px;text-align:center}.bluebtn:hover{background:var(--blue-dark)}
+    .how{padding:45px 0 20px}.tri{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.tile{padding:24px;background:#fff;border:1px solid var(--line);border-radius:22px}.tile .n{font-size:13px;color:var(--blue);font-weight:900}.tile h3{font-size:19px;line-height:1.2;margin:10px 0 8px}.tile p{font-size:14px;color:var(--muted);margin:0}.faq{padding:50px 0 80px;max-width:900px}.faq details{padding:17px 0;border-bottom:1px solid var(--line)}.faq summary{cursor:pointer;font-size:16px;font-weight:750}.faq p{color:var(--muted);font-size:14px;margin:11px 0 0}.foot{padding:20px 0 100px;border-top:1px solid var(--line);display:flex;gap:20px;justify-content:space-between;align-items:center;font-size:12px;color:var(--muted)}.foot a{color:var(--blue)}.mobilebar{display:none}.hidden-notice{display:none;position:fixed;z-index:50;inset:auto 20px 20px;max-width:440px;margin:auto;background:#212844;color:#fff;border-radius:14px;padding:17px;box-shadow:0 12px 30px #0005}.hidden-notice.visible{display:block}
+    @media(max-width:900px){.hero{padding:45px 34px;grid-template-columns:1fr 0.85fr;gap:24px}.hero h1{font-size:43px}.preview h3{font-size:20px}.result{grid-template-columns:1fr}.bluebtn{width:100%}} 
+    @media(max-width:700px){.shell{width:min(100% - 28px,600px)}.top{padding:16px 0}.topright .navlink{display:none}.tinyCTA{font-size:12px;padding:10px 12px}.hero{border-radius:23px;padding:29px 23px;grid-template-columns:1fr;gap:34px;min-height:0}.hero h1{font-size:clamp(36px,9vw,51px);margin:17px 0}.hero p{font-size:15px;margin-bottom:20px}.actions{display:grid;grid-template-columns:1fr}.primary,.second{width:100%}.preview{max-width:430px;transform:rotate(0deg);margin:auto}.below{padding-top:43px}.options,.tri{grid-template-columns:1fr}.option{padding:18px;gap:6px}.option .emoji{height:38px;width:38px}.option strong{font-size:18px}.result{padding:20px}.how{padding:38px 0 0}.faq{padding-bottom:50px}.foot{padding-bottom:110px;flex-wrap:wrap}.mobilebar{position:fixed;z-index:20;inset:auto 0 0;display:block;background:#fffffff2;backdrop-filter:blur(13px);border-top:1px solid var(--line);padding:12px 16px max(12px,env(safe-area-inset-bottom))}.mobilebar a{display:block;border-radius:14px;padding:13px 15px;background:var(--blue);color:#fff;font-weight:850;text-decoration:none;text-align:center}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+  </style>
+</head>
+<body>
+<header class="shell top">
+  <a class="brand" href="#top" aria-label="VentorMe, наверх">Ventor<span>Me</span></a>
+  <nav class="topright" aria-label="Навигация"><a class="navlink" href="#start">Как это работает</a><a class="tinyCTA team-cta" href="#">Начать бесплатно ↗</a></nav>
+</header>
+<main>
+  <section class="shell hero" id="top" aria-labelledby="title">
+    <div class="heroContent">
+      <span class="eyebrow">Профессия · Университет · Поступление</span>
+      <h1 id="title">Не знаешь, куда поступать? <span style="color:#cfff80">Начни с плана.</span></h1>
+      <p>VentorMe помогает разобраться в профессиях, выбрать вузы и подготовиться к поступлению. Начни с бесплатного мини-теста — без оплаты на старте.</p>
+      <div class="actions"><a class="primary team-cta" href="#">Начать бесплатно <span aria-hidden="true">→</span></a><a class="second" href="#start">Сначала выбрать цель ↓</a></div>
+      <div class="promise"><span>✓ Бесплатный тариф</span><span>✓ Для школьников</span><span>✓ Можно с телефона</span></div>
+    </div>
+    <div class="preview" aria-label="Пример этапов пути к поступлению">
+      <div class="pretop"><strong>ТВОЙ МАРШРУТ</strong><span class="pills" aria-hidden="true"><i></i><i></i><i></i></span></div>
+      <h3>От вопроса «куда?» — к первым шагам</h3>
+      <p>Пример того, какие задачи помогает решать VentorMe</p>
+      <div class="timeline"><div class="tl"><span class="num">01</span>Определить интересные направления</div><div class="tl"><span class="num">02</span>Исследовать подходящие вузы</div><div class="tl"><span class="num">03</span>Составить план подготовки</div></div>
+      <div class="bottompreview"><span>Пример, не персональный результат</span><strong>Начать можно бесплатно</strong></div>
+    </div>
+  </section>
+  <section class="shell below" id="start" aria-labelledby="choice-title">
+    <div class="sectionLabel">Один простой вопрос</div>
+    <h2 class="h2" id="choice-title">Что сейчас для тебя самое важное?</h2>
+    <p class="sub">Выбери вариант. Мы покажем, с чего можно начать в VentorMe — без длинной анкеты и без ввода личных данных.</p>
+    <div class="options" role="group" aria-label="Выбор цели">
+      <button class="option" type="button" data-choice="career" aria-pressed="true"><span class="emoji" aria-hidden="true">◈</span><strong>Выбрать профессию</strong><small>Понять, какие направления мне подходят</small></button>
+      <button class="option" type="button" data-choice="uni" aria-pressed="false"><span class="emoji" aria-hidden="true">▣</span><strong>Найти университет</strong><small>Разобраться с вузами и грантами</small></button>
+      <button class="option" type="button" data-choice="exam" aria-pressed="false"><span class="emoji" aria-hidden="true">✓</span><strong>Подготовиться к экзаменам</strong><small>Оценить уровень SAT или IELTS</small></button>
+    </div>
+    <div class="result" aria-live="polite"><div><div class="k">Твой первый шаг</div><h3 id="result-h">Узнай, какие направления тебе интересны</h3><p id="result-p">В бесплатном тарифе VentorMe есть мини-тест на профессию. Более глубокие AI-функции относятся к платным возможностям.</p></div><a class="bluebtn team-cta" href="#">Перейти к регистрации →</a></div>
+  </section>
+  <section class="shell how" aria-labelledby="steps-title">
+    <div class="sectionLabel">Как начать</div><h2 class="h2" id="steps-title">Три шага вместо хаоса</h2>
+    <div class="tri"><article class="tile"><span class="n">ШАГ 01</span><h3>Выбери цель</h3><p>Профессия, университет или экзамен — начни с того, что волнует сейчас.</p></article><article class="tile"><span class="n">ШАГ 02</span><h3>Зарегистрируйся</h3><p>Создай аккаунт на официальной платформе VentorMe. На нашем лендинге аккаунты не создаются.</p></article><article class="tile"><span class="n">ШАГ 03</span><h3>Попробуй бесплатно</h3><p>Изучи доступный мини-тест и другие инструменты бесплатного тарифа, затем реши, нужно ли больше.</p></article></div>
+  </section>
+  <section class="shell faq" aria-labelledby="faqtitle">
+    <div class="sectionLabel">Без скрытых ожиданий</div><h2 class="h2" id="faqtitle">Ответы перед регистрацией</h2>
+    <details><summary>Это действительно бесплатно?</summary><p>У VentorMe есть бесплатный тариф (Free): мини-тест на профессию, определение уровня IELTS/SAT и создание портфолио. Платформа также предлагает платную подписку Plus с дополнительными возможностями.</p></details>
+    <details><summary>Мне уже нужно знать, куда я хочу поступать?</summary><p>Нет. Можно начать с выбора интересного направления и мини-теста, а потом переходить к поиску университетов.</p></details>
+    <details><summary>Куда ведут кнопки?</summary><p>На официальную страницу регистрации ventorme.ai. Этот промолендинг создан участниками HACKNEXT и не собирает ваши личные данные.</p></details>
+  </section>
+</main>
+<footer class="shell foot"><span>VentorMe · промолендинг команды HACKNEXT. Неофициальная работа участников хакатона.</span><a href="https://ventorme.ai" target="_blank" rel="noopener noreferrer">Официальный сайт VentorMe ↗</a></footer>
+<div class="mobilebar"><a class="team-cta" href="#">Начать бесплатно на VentorMe →</a></div>
+<div role="alert" id="setupnotice" class="hidden-notice">Перед публикацией укажите свой номер команды в файле index.html: найдите TEAM_NUMBER и замените YOUR_TEAM_NUMBER.</div>
+<script>
+  // ВАЖНО: ЗАМЕНИТЕ ТОЛЬКО СТРОКУ НИЖЕ. Пример: const TEAM_NUMBER = "017";
+  const TEAM_NUMBER = "YOUR_TEAM_NUMBER";
+  const validTeam = /^\d+$/.test(TEAM_NUMBER);
+  const registerUrl = validTeam ? `https://ventorme.ai/register?utm_source=hacknext&utm_campaign=team-${encodeURIComponent(TEAM_NUMBER)}` : null;
+  for (const link of document.querySelectorAll('.team-cta')) {
+    if (registerUrl) { link.href = registerUrl; link.rel = 'noopener noreferrer'; }
+    else {link.addEventListener('click',e=>{e.preventDefault();document.getElementById('setupnotice').classList.add('visible')});}
+  }
+  const content={
+    career:['Узнай, какие направления тебе интересны','В бесплатном тарифе VentorMe есть мини-тест на профессию. Более глубокие AI-функции относятся к платным возможностям.'],
+    uni:['Начни с выбора направления и изучения вузов','VentorMe помогает исследовать университеты и возможности поступления. Расширенный AI-подбор относится к Plus.'],
+    exam:['Проверь свой текущий уровень IELTS или SAT','В бесплатном тарифе VentorMe доступны проверки уровня IELTS и SAT. Полноценная подготовка с тренажёрами входит в Plus.']
+  };
+  document.querySelectorAll('.option').forEach(b=>b.addEventListener('click',()=>{
+    document.querySelectorAll('.option').forEach(x=>x.setAttribute('aria-pressed', String(x===b)));
+    const [h,p]=content[b.dataset.choice];document.getElementById('result-h').textContent=h;document.getElementById('result-p').textContent=p;
+  }));
+</script>
+</body>
+</html>
